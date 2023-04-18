@@ -9,7 +9,7 @@ app.post('/login',(req,res)=>{
         "username" : "cvr",
         "password":"cse"
     }
-    jwt.sign({user},'secretkey', {expiresIn:"5s"},(err,token)=>{
+    jwt.sign({user},'secretkey', {expiresIn:"30s"},(err,token)=>{
          if(!err) {
             reqtoken = token;
             res.json({token});
